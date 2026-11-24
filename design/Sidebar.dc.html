@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shell B sidebar</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<nav class="ui {{theme}} side-nav" aria-label="Main" style="display: flex; flex-direction: column; background: var(--side)">
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 16px 12px 20px; flex: 1 0 auto">
+<a href="Main.dc.html" style="display: flex; flex-direction: column; padding: 4px 10px 0; color: inherit; text-decoration: none; min-width: 0">
+<span style="font-weight: 700; font-size: 16px; line-height: 1.3; letter-spacing: -.01em">SimpleSAMLphp</span>
+<span class="mono faint" style="font-size: 11.5px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">login.example.edu</span>
+</a>
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<sc-if value="{{g.hasHead}}" hint-placeholder-val="{{ true }}"><h2 class="nav-head">{{g.head}}</h2></sc-if>
+<sc-for list="{{g.items}}" as="item" hint-placeholder-count="3">
+<a class="{{item.cls}}" href="{{item.href}}" aria-current="{{item.current}}">
+<span>{{item.label}}</span>
+<sc-if value="{{item.hasCount}}" hint-placeholder-val="{{ false }}"><span class="nav-count">{{item.count}}</span></sc-if>
+<sc-if value="{{item.hasBadge}}" hint-placeholder-val="{{ false }}"><span class="nav-badge" aria-label="{{item.badgeLabel}}">{{item.badge}}</span></sc-if>
+</a>
+</sc-for>
+</div>
+</sc-for>
+</div>
+<div style="position: sticky; bottom: 0; padding: 8px; background: var(--side)">
+<div class="card" style="display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 12px; box-shadow: var(--shadow-1)">
+<div style="display: flex; flex-direction: column; align-items: flex-start; flex: 1 1 auto; min-width: 0">
+<span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 600; line-height: 1.4">admin</span>
+<span class="lang">
+<select class="lang-select" aria-label="Language"><option>English</option><option>Español</option><option>العربية</option></select>
+<svg aria-hidden="true" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg>
+</span>
+</div>
+<a class="logout" href="#" aria-label="Log out" title="Log out"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5H3.5v11H6M10.5 5l3 3-3 3M13.5 8H6.5"></path></svg></a>
+</div>
+</div>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"mode":{"editor":"enum","options":["console","core","full"],"default":"console"},"active":{"editor":"enum","options":["overview","sp","idp","hosted","external","authsources","publish","history","nodes","config","test","federation"],"default":"overview"},"bare":{"editor":"boolean","default":false},"pending":{"editor":"text","default":"7"},"$preview":{"width":232,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+const active = this.props.active ?? 'overview';
+const mode = this.props.mode ?? 'console';
+const bare = !!this.props.bare;
+const pending = this.props.pending ?? '7';
+const it = (id, label, href, c0, b0) => {
+const count = bare ? '' : c0;
+const badge = (bare || pending === '0' || !b0) ? '' : pending;
+return {
+label: label, href: href || '#', count: count || '', hasCount: !!count,
+badge: badge || '', hasBadge: !!badge, badgeLabel: badge ? badge + ' changes to publish' : '',
+cls: 'nav-item' + (id === active ? ' active' : ''), current: id === active ? 'page' : undefined
+};
+};
+const system = { head: 'System', hasHead: true, items: [
+it('config', 'Configuration', 'Configuration.dc.html'), it('test', 'Test authentication', 'TestAuth.dc.html'), it('federation', 'Federation', 'Federation.dc.html')] };
+let groups = [];
+if (mode !== 'core') {
+groups = [
+{ head: '', hasHead: false, items: [it('overview', 'Overview', 'Main.dc.html')] },
+{ head: 'Entities', hasHead: true, items: [
+it('sp', 'Service providers', 'ServiceProviders.dc.html', '42'),
+it('idp', 'Identity providers', '#', '6'),
+it('hosted', 'Hosted IdP'),
+it('external', 'External entities', 'External.dc.html', '3,180')] },
+{ head: 'Login', hasHead: true, items: [it('authsources', 'Authsources', 'Authsources.dc.html', '5')] },
+{ head: 'Changes', hasHead: true, items: [
+it('publish', 'Publish', 'Publish.dc.html', '', '7'),
+it('history', 'History', 'HistorySnapshots.dc.html'),
+it('nodes', 'Nodes', 'Nodes.dc.html', '3')] }
+];
+}
+groups.push(system);
+if (mode === 'full') {
+groups.push({ head: 'Modules', hasHead: true, items: [it('cron', 'Cron'), it('metarefresh', 'Metarefresh', '#', '4')] });
+}
+return { theme: this.props.theme ?? 'light', groups: groups };
+}
+}
+</script>
+</body>
+</html>

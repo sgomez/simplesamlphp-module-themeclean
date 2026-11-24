@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Log in, wrong credentials</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px 16px 24px; background: var(--bg)">
+<header style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<span style="width: 56px; height: 56px; border: 1px dashed var(--border-strong); border-radius: 10px; display: inline-flex; align-items: center; justify-content: center" class="xs faint">Logo</span>
+<span style="font-weight: 600; font-size: 16px; text-align: center">Example University</span>
+</header>
+<main class="card" style="width: 100%; max-width: 400px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: var(--shadow-1)">
+<h1 class="h1" style="font-size: 22px">Log in</h1><span class="muted">to continue to <span style="font-weight: 600; color: var(--text)">Moodle</span></span><div class="callout callout-error"><svg class="ic ic-error" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm-.9 3.5h1.8v5H7.1v-5zm0 6.2h1.8v1.8H7.1v-1.8z"></path></svg><div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0"><span style="font-weight: 600">Wrong username or password</span></div></div><label style="display: flex; flex-direction: column; gap: 6px"><span class="label">Username</span><input class="input" type="text" value="m.garcia" style="height: 44px; font-size: 16px" autocomplete="username"></label><label style="display: flex; flex-direction: column; gap: 6px"><span class="label">Password</span><input class="input" type="password" value="" style="height: 44px; font-size: 16px" autocomplete="current-password"></label><label style="display: flex; align-items: center; gap: 10px; min-height: 24px"><input class="check" type="checkbox" style="width: 20px; height: 20px"><span>Remember my username</span></label><button class="btn btn-primary" type="submit" style="height: 44px; font-size: 16px">Log in</button><div class="small" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px"><a class="link" href="#">Forgot your password?</a><a class="link" href="LoginMulti.dc.html">Log in another way</a></div>
+</main>
+<footer style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px">
+<select class="input" aria-label="Language" style="width: auto; height: 44px"><option>English</option><option>Español</option><option>Français</option><option>العربية</option></select>
+<div class="small" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px"><a class="link" href="#">Help</a><a class="link" href="#">Privacy</a><span class="muted">IT Services</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

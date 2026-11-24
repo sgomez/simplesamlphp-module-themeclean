@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Consent</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px 16px 24px; background: var(--bg)">
+<header style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<span style="width: 56px; height: 56px; border: 1px dashed var(--border-strong); border-radius: 10px; display: inline-flex; align-items: center; justify-content: center" class="xs faint">Logo</span>
+<span style="font-weight: 600; font-size: 16px; text-align: center">Example University</span>
+</header>
+<main class="card" style="width: 100%; max-width: 400px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: var(--shadow-1)">
+<h1 class="h1" style="font-size: 22px">Share with Moodle?</h1><dl style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 0"><dt class="muted">Name</dt><dd style="margin: 0; overflow-wrap: anywhere">María García</dd><dt class="muted">Email</dt><dd style="margin: 0; overflow-wrap: anywhere">m.garcia@example.edu</dd><dt class="muted">Username</dt><dd style="margin: 0; overflow-wrap: anywhere">m.garcia</dd><dt class="muted">Affiliation</dt><dd style="margin: 0; overflow-wrap: anywhere">staff, member</dd></dl><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="checkbox" style="width: 20px; height: 20px"><span>Remember my choice</span></label><div style="display: flex; flex-wrap: wrap; gap: 8px"><button class="btn btn-primary" type="submit" style="flex: 1 1 120px; height: 44px; font-size: 16px">Share</button><button class="btn btn-secondary" type="submit" style="flex: 1 1 120px; height: 44px; font-size: 16px">Cancel</button></div>
+</main>
+<footer style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px">
+<select class="input" aria-label="Language" style="width: auto; height: 44px"><option>English</option><option>Español</option><option>Français</option><option>العربية</option></select>
+<div class="small" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px"><a class="link" href="#">Help</a><a class="link" href="#">Privacy</a><span class="muted">IT Services</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":1280,"height":760}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

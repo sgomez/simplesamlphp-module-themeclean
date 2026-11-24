@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Logged out, partially</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px 16px 24px; background: var(--bg)">
+<header style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<span style="width: 56px; height: 56px; border: 1px dashed var(--border-strong); border-radius: 10px; display: inline-flex; align-items: center; justify-content: center" class="xs faint">Logo</span>
+<span style="font-weight: 600; font-size: 16px; text-align: center">Example University</span>
+</header>
+<main class="card" style="width: 100%; max-width: 400px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: var(--shadow-1)">
+<h1 class="h1" style="font-size: 22px">Not logged out everywhere</h1><div class="card" style="overflow: hidden"><div class="row"><svg class="ic ic-success" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.2 3.2L13 4.8"></path></svg><span style="flex: 1 1 auto">Moodle</span><span class="small muted">Logged out</span></div><div class="row"><svg class="ic ic-success" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.2 3.2L13 4.8"></path></svg><span style="flex: 1 1 auto">Library catalogue</span><span class="small muted">Logged out</span></div><div class="row"><svg class="ic ic-warning" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2 15.2 14H.8L8 1.2zm-.9 4.6v4h1.8v-4H7.1zm0 5.2v1.7h1.8V11H7.1z"></path></svg><span style="flex: 1 1 auto; font-weight: 600">Room booking</span><span class="small" style="color: var(--warning-text)">Still logged in</span></div></div><span>Close your browser to finish.</span>
+</main>
+<footer style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px">
+<select class="input" aria-label="Language" style="width: auto; height: 44px"><option>English</option><option>Español</option><option>Français</option><option>العربية</option></select>
+<div class="small" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px"><a class="link" href="#">Help</a><a class="link" href="#">Privacy</a><span class="muted">IT Services</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":1280,"height":700}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

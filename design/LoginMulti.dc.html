@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Log in, method and form together</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px 16px 24px; background: var(--bg)">
+<header style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<span style="width: 56px; height: 56px; border: 1px dashed var(--border-strong); border-radius: 10px; display: inline-flex; align-items: center; justify-content: center" class="xs faint">Logo</span>
+<span style="font-weight: 600; font-size: 16px; text-align: center">Example University</span>
+</header>
+<main class="card" style="width: 100%; max-width: {{cardMax}}; display: flex; flex-direction: column; box-shadow: var(--shadow-1); overflow: hidden">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 28px 24px 16px">
+<h1 class="h1" style="font-size: 22px">Log in</h1><span class="muted">to continue to <span style="font-weight: 600; color: var(--text)">Moodle</span></span>
+</div>
+
+<sc-if value="{{isTabs}}" hint-placeholder-val="{{ false }}">
+<div class="tabs" role="tablist" aria-label="How to log in" style="padding: 0 12px">
+<sc-for list="{{sources}}" as="s" hint-placeholder-count="3"><button type="button" role="tab" class="{{s.tabCls}}" aria-selected="{{s.on}}" onClick="{{s.pick}}">{{s.name}}</button></sc-for>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; align-items: stretch">
+<sc-if value="{{isSplit}}" hint-placeholder-val="{{ false }}">
+<div role="tablist" aria-label="How to log in" aria-orientation="vertical" style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 220px; padding: 12px; background: var(--surface-2); border-top: 1px solid var(--border); border-inline-end: 1px solid var(--border)">
+<sc-for list="{{sources}}" as="s" hint-placeholder-count="3"><button type="button" role="tab" class="{{s.vCls}}" aria-selected="{{s.on}}" onClick="{{s.pick}}"><b>{{s.name}}</b><span class="small">{{s.desc}}</span></button></sc-for>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-direction: column; gap: 16px; flex: 2 1 320px; min-width: 0; padding: 20px 24px 28px; border-top: {{panelRule}}">
+<sc-if value="{{isSteps}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 8px; padding-bottom: 16px; border-bottom: 1px solid var(--border)">
+<sc-if value="{{stepClosed}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="color: var(--success-text); display: inline-flex"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.2 3.2L13 4.8"></path></svg></span>
+<span style="flex: 1 1 auto; font-weight: 600">{{current.name}}</span>
+<button class="btn btn-secondary" type="button" onClick="{{change}}" style="height: 44px">Change</button>
+</div>
+</sc-if>
+<sc-if value="{{choosing}}" hint-placeholder-val="{{ false }}">
+<div role="radiogroup" aria-label="How to log in" style="display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{sources}}" as="s" hint-placeholder-count="3"><button type="button" role="radio" class="{{s.vCls}}" aria-checked="{{s.on}}" onClick="{{s.pick}}"><b>{{s.name}}</b><span class="small">{{s.desc}}</span></button></sc-for>
+</div>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{isForm}}" hint-placeholder-val="{{ true }}">
+<label style="display: flex; flex-direction: column; gap: 6px"><span class="label">{{current.user}}</span><input class="input" type="text" autocomplete="username" style="height: 44px; font-size: 16px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px"><span class="label">Password</span><input class="input" type="password" autocomplete="current-password" style="height: 44px; font-size: 16px"></label>
+<button class="btn btn-primary" type="submit" style="height: 44px; font-size: 16px">Log in</button>
+<a class="link" href="#" style="align-self: center">Forgot your password?</a>
+</sc-if>
+<sc-if value="{{isOther}}" hint-placeholder-val="{{ false }}">
+<span>You log in at your home institution and come back here.</span>
+<a class="btn btn-primary" href="Discovery.dc.html" style="height: 44px; font-size: 16px">Choose your organisation</a>
+</sc-if>
+</div>
+</div>
+</main>
+<footer style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px">
+<select class="input" aria-label="Language" style="width: auto; height: 44px"><option>English</option><option>Español</option><option>Français</option><option>العربية</option></select>
+<div class="small" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px"><a class="link" href="#">Help</a><a class="link" href="#">Privacy</a><span class="muted">IT Services</span></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"variant":{"editor":"enum","options":["split","tabs","steps"],"default":"split"},"$preview":{"width":1280,"height":820}}'>
+class Component extends DCLogic {
+renderVals() {
+const variant = this.props.variant ?? 'split';
+const st = this.state || {};
+const src = st.src ?? 'uni';
+const choosing = variant === 'steps' && !!st.choosing;
+const list = [
+{ id: 'uni', name: 'University account', desc: 'Staff and students', user: 'Username' },
+{ id: 'guest', name: 'Guest account', desc: 'Visitors and external users', user: 'Email' },
+{ id: 'other', name: 'Another organisation', desc: 'Through your home institution', user: '' }
+];
+const sources = list.map((s) => Object.assign({}, s, {
+on: s.id === src, tabCls: s.id === src ? 'on' : '', vCls: 'vtab' + (s.id === src ? ' on' : ''),
+pick: () => this.setState({ src: s.id, choosing: false })
+}));
+const showPanel = !choosing;
+return {
+theme: this.props.theme ?? 'light',
+sources: sources, current: sources.find((s) => s.on),
+isTabs: variant === 'tabs', isSplit: variant === 'split', isSteps: variant === 'steps',
+choosing: choosing, stepClosed: !choosing, change: () => this.setState({ choosing: true }),
+isForm: showPanel && src !== 'other', isOther: showPanel && src === 'other',
+cardMax: variant === 'split' ? '760px' : variant === 'tabs' ? '520px' : '440px',
+panelRule: variant === 'tabs' ? '0' : '1px solid var(--border)'
+};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Federation</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}} shell" style="display: flex; flex-wrap: wrap; min-height: 100vh; background: var(--bg); position: relative">
+<div id="nav" class="shell-side" style="flex: 1 1 232px; max-width: 100%; background: var(--side); border-inline-end: 1px solid var(--border)">
+<dc-import name="Sidebar" active="federation" mode="full" theme="{{theme}}" hint-size="232px,760px"></dc-import>
+</div>
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<header style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 12px 32px; min-height: 56px; border-bottom: 1px solid var(--border)">
+<a class="menu-btn btn btn-secondary btn-icon" href="#nav" aria-label="Menu"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 4h12M2 8h12M2 12h12"></path></svg></a>
+<nav aria-label="Breadcrumb" style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 13px; flex: 1 1 auto; min-width: 0">
+<span aria-current="page" style="font-weight: 600">Federation</span>
+</nav>
+<a class="btn btn-global btn-sm" href="Publish.dc.html"><span class="dot dot-half" aria-hidden="true"></span>Review 7 changes</a>
+</header>
+<main style="display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 1180px; padding: 32px 32px 64px; flex: 1 0 auto">
+<h1 class="h1">Federation</h1><nav class="tabs" aria-label="Views"><a href="#">Entities</a><a href="#" class="on" aria-current="page">Metadata converter</a><a href="#">Certificates</a></nav><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: 16px"><label style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><span class="label">XML metadata</span><textarea class="input mono" rows="12" spellcheck="false" wrap="off" defaultValue="&lt;md:EntityDescriptor entityID=&quot;https://hr.example.edu/sp&quot;&gt;&#10;  &lt;md:SPSSODescriptor protocolSupportEnumeration=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;&gt;&#10;    &lt;md:AssertionConsumerService index=&quot;0&quot;&#10;        Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;&#10;        Location=&quot;https://hr.example.edu/saml/acs&quot;/&gt;&#10;  &lt;/md:SPSSODescriptor&gt;&#10;&lt;/md:EntityDescriptor&gt;"></textarea><button class="btn btn-primary" type="submit" style="align-self: flex-start">Convert</button></label><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><div style="display: flex; align-items: center"><span class="label" style="flex: 1 1 auto"><span class="mono">saml20-sp-remote</span></span><button class="btn btn-quiet btn-sm" type="button" data-copy>Copy</button></div><pre class="code" tabindex="0" aria-label="PHP"><div>$metadata[&#x27;https://hr.example.edu/sp&#x27;] = [</div><div>    &#x27;AssertionConsumerService&#x27; =&gt; [</div><div>        [</div><div>            &#x27;Binding&#x27; =&gt; &#x27;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&#x27;,</div><div>            &#x27;Location&#x27; =&gt; &#x27;https://hr.example.edu/saml/acs&#x27;,</div><div>            &#x27;index&#x27; =&gt; 0,</div><div>        ],</div><div>    ],</div><div>];</div></pre></div></div><div style="display: flex; align-items: center; gap: 10px"><h2 class="h2">Hosted entities</h2></div><div class="card" style="overflow: hidden"><a class="row" href="#" style="flex-wrap: wrap; gap: 4px 24px"><div style="display: flex; flex-direction: column; gap: 1px; flex: 1 1 300px; min-width: 0"><span class="mono" style="font-weight: 600; font-size: 13.5px">default-sp</span><span class="eid"><span class="eid-a">https://logi</span><span class="eid-b">n.example.edu/sp</span></span></div><div style="flex: 0 1 auto; min-width: 0"><span class="small muted">SAML 2.0 SP</span></div><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" style="flex: none; color: var(--text-3)"><path d="M6 3l5 5-5 5"></path></svg></a><a class="row" href="#" style="flex-wrap: wrap; gap: 4px 24px"><div style="display: flex; flex-direction: column; gap: 1px; flex: 1 1 300px; min-width: 0"><span class="" style="font-weight: 600">Hosted IdP</span><span class="eid"><span class="eid-a">https://login.example.edu/saml2/</span><span class="eid-b">idp/metadata.php</span></span></div><div style="flex: 0 1 auto; min-width: 0"><span class="small muted">SAML 2.0 IdP</span></div><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" style="flex: none; color: var(--text-3)"><path d="M6 3l5 5-5 5"></path></svg></a></div>
+</main>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>
