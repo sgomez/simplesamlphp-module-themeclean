@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tabs, breadcrumbs, pagination, menu</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 560px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Tabs, breadcrumbs, pagination, menu</h1><div style="display: flex; flex-direction: column; gap: 24px; min-width: 0"><nav class="tabs" aria-label="Views"><a href="#" class="on" aria-current="page">Snapshots</a><a href="#">Audit trail</a></nav><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 13px"><a class="crumb" href="#">Console</a><span aria-hidden="true" class="faint">/</span><a class="crumb" href="#">Service providers</a><span aria-hidden="true" class="faint">/</span><span aria-current="page" style="font-weight: 600">Moodle</span></nav><nav aria-label="Pagination" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px"><span class="small muted" style="flex: 1 1 auto">1 to 25 of 2,941</span><a class="btn btn-secondary btn-sm is-disabled" href="#">Previous</a><span class="small muted">Page 1 of 118</span><a class="btn btn-secondary btn-sm" href="#">Next</a></nav><nav aria-label="Pagination" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px"><span class="small muted" style="flex: 1 1 auto">26 to 50 of 2,941</span><a class="btn btn-secondary btn-sm" href="#">Previous</a><span class="small muted">Page 2 of 118</span><a class="btn btn-secondary btn-sm" href="#">Next</a></nav><nav aria-label="Pagination" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px"><span class="small muted" style="flex: 1 1 auto">2,926 to 2,941 of 2,941</span><a class="btn btn-secondary btn-sm" href="#">Previous</a><span class="small muted">Page 118 of 118</span><a class="btn btn-secondary btn-sm is-disabled" href="#">Next</a></nav><div class="card menu" role="menu" aria-label="More actions" style="align-self: flex-start"><a class="nav-item" role="menuitem" href="#">Replace from…</a><a class="nav-item is-hover" role="menuitem" href="#">Download</a><a class="nav-item" role="menuitem" href="#">Discard changes…</a><hr><a class="nav-item" role="menuitem" href="#" style="color: var(--danger-text)">Delete…</a></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Tabs and pages are links, so every view has an address. The total is always shown.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":560}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

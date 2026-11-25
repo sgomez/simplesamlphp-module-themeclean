@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Code block</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 400px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Code block</h1><div style="display: flex; flex-direction: column; gap: 8px; min-width: 0"><div style="display: flex; align-items: center"><span class="xs muted" style="flex: 1 1 auto">PHP</span><button class="btn btn-quiet btn-sm" type="button">Copy</button></div><pre class="code" tabindex="0" aria-label="PHP"><div>$metadata[<span class="tk-s">&#x27;https://hr.example.edu/sp&#x27;</span>] = [</div><div>    <span class="tk-s">&#x27;name&#x27;</span> =&gt; [<span class="tk-s">&#x27;en&#x27;</span> =&gt; <span class="tk-s">&#x27;HR self-service&#x27;</span>],</div><div>    <span class="tk-s">&#x27;validate.authnrequest&#x27;</span> =&gt; <span class="tk-k">true</span>, <span class="tk-c">// set in the Console</span></div><div>];</div></pre><div style="display: flex; align-items: center"><span class="xs muted" style="flex: 1 1 auto">XML</span><button class="btn btn-quiet btn-sm" type="button">Copy</button></div><pre class="code" tabindex="0" aria-label="XML"><div>&lt;<span class="tk-k">md:AssertionConsumerService</span> <span class="tk-n">index</span>=<span class="tk-s">"0"</span></div><div>    <span class="tk-n">Location</span>=<span class="tk-s">"https://hr.example.edu/saml/acs"</span>/&gt;</div></pre></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":400}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

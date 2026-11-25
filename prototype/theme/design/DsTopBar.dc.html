@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Top bar</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 500px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Top bar</h1><div style="display: flex; flex-direction: column; gap: 14px; min-width: 0"><header class="card" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 12px 20px; min-height: 56px; border-radius: 8px"><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 13px; flex: 1 1 auto"><a class="crumb" href="#">Console</a><span aria-hidden="true" class="faint">/</span><span aria-current="page" style="font-weight: 600">Service providers</span></nav><a class="btn btn-global btn-sm" href="Publish.dc.html"><span class="dot dot-half" aria-hidden="true"></span>Review 7 changes</a></header><header class="card" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 12px 20px; min-height: 56px; border-radius: 8px"><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 13px; flex: 1 1 auto"><a class="crumb" href="#">Console</a><span aria-hidden="true" class="faint">/</span><span aria-current="page" style="font-weight: 600">Service providers</span></nav><a class="btn btn-global is-hover btn-sm" href="Publish.dc.html"><span class="dot dot-half" aria-hidden="true"></span>Review 7 changes</a></header><header class="card" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 12px 20px; min-height: 56px; border-radius: 8px"><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 13px; flex: 1 1 auto"><a class="crumb" href="#">Console</a><span aria-hidden="true" class="faint">/</span><span aria-current="page" style="font-weight: 600">Publish</span></nav><span class="status s-live"><span class="dot dot-full" aria-hidden="true"></span>Live: Snapshot #41</span></header><header class="card" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 12px 20px; min-height: 56px; border-radius: 8px"><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 13px; flex: 1 1 auto"><span aria-current="page" style="font-weight: 600">Configuration</span></nav></header><header class="card" style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; padding: 12px 20px; min-height: 56px; border-radius: 8px"><nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 13px; flex: 1 1 auto"><a class="menu-btn btn btn-secondary btn-icon" href="#" aria-label="Menu" style="display: inline-flex"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2 4h12M2 8h12M2 12h12"></path></svg></a><a class="crumb" href="#">Console</a><span aria-hidden="true" class="faint">/</span><span aria-current="page" style="font-weight: 600">Service providers</span></nav><a class="btn btn-global btn-sm" href="Publish.dc.html"><span class="dot dot-half" aria-hidden="true"></span>7</a></header></div><p class="xs faint" style="margin: 0; max-width: 72ch">Breadcrumbs left, the global action right. The slot is empty on core pages and on a clean Console. Last: below 900 px, with the menu button.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":500}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

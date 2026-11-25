@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 420px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Type</h1><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">24 / 650</span><span class="h1">Service providers</span></div><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">16 / 600</span><span class="h2">Needs attention</span></div><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">14 / 600</span><span class="h3">Signing and encryption</span></div><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">14 / 400</span><span>Body and controls</span></div><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">13 / 400</span><span class="small muted">Descriptions and secondary text</span></div><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">12 / 600</span><span class="nav-head" style="padding: 0; margin: 0">Group heading</span></div><div style="display: flex; align-items: baseline; gap: 16px"><span class="mono xs faint" style="flex: 0 0 84px">12.5 mono</span><span class="mono">validate.authnrequest · saml20-sp-remote</span></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Inter and JetBrains Mono, self-hosted, with system fallbacks. Monospace only for what an administrator copies or looks up.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

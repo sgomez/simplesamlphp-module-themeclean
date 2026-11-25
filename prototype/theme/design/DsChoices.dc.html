@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Switch, checkbox, radio</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 420px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Switch, checkbox, radio</h1><div style="display: flex; flex-direction: column; gap: 20px; min-width: 0"><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">Switch</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><label style="display: flex; align-items: center; gap: 10px"><input class="switch" type="checkbox" defaultChecked="{{ true }}"><span>On</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="switch" type="checkbox"><span>Off</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="switch is-focus" type="checkbox" defaultChecked="{{ true }}"><span>Focus</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="switch" type="checkbox" disabled><span>Disabled</span></label></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">Checkbox</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="checkbox" defaultChecked="{{ true }}"><span>Checked</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="checkbox"><span>Unchecked</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="checkbox" disabled><span>Disabled</span></label></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">Radio group</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><div style="display: flex; flex-direction: column; gap: 8px; min-width: 0"><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="radio" name="r" defaultChecked="{{ true }}"><span>HTTP-POST</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="radio" name="r"><span>HTTP-Redirect</span></label><label style="display: flex; align-items: center; gap: 10px"><input class="check" type="radio" name="r"><span>HTTP-Artifact</span></label></div></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">Segmented</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><nav class="seg" aria-label="Example"><a class="on" href="#" aria-current="true">All <span class="faint" style="font-weight: 400">42</span></a><a href="#">Not live <span class="faint">3</span></a><a class="is-focus" href="#">Focus</a></nav></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">A switch always carries the word On or Off. Closed sets are selects or radios, never free text.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

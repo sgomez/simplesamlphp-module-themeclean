@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Report table</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 320px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Report table</h1><div class="card" style="overflow-x: auto"><table class="tbl"><thead><tr><th scope="col"><a class="crumb" href="#" style="color: inherit; font-weight: 600">Check ↑</a></th><th scope="col">Result</th><th scope="col"></th></tr></thead><tbody><tr><td>PHP version</td><td><span class="status s-live"><span class="dot dot-full" aria-hidden="true"></span>Pass</span></td><td><span class="mono">8.3.14</span></td></tr><tr><td><span class="mono">technicalcontact_email</span></td><td><span class="status s-warn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="flex: none"><path d="M8 1.2 15.2 14H.8L8 1.2zm-.9 4.6v4h1.8v-4H7.1zm0 5.2v1.7h1.8V11H7.1z"></path></svg><span>Not set</span></span></td><td>Set it in <span class="mono">config.php</span></td></tr><tr><td>PHP extension <span class="mono">ldap</span></td><td><span class="status s-danger"><span class="dot dot-minus" aria-hidden="true"></span>Missing</span></td><td>Needed by <span class="mono">ldap:Ldap</span></td></tr></tbody></table></div><p class="xs faint" style="margin: 0; max-width: 72ch">Sticky header that sorts through a link. Wide tables scroll inside their own box.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":320}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

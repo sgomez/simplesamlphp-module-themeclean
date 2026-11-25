@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Option group</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 860px; min-height: 620px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Option group</h1><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><details class="grp card"><summary><span class="h3">Consent and privacy</span><span class="small muted">0 of 4 set</span></summary><div style="display: flex; flex-direction: column"></div></details><details class="grp card" open="{{ true }}"><summary><span class="h3">Signing</span><span class="small muted">2 of 8 set</span></summary><div style="display: flex; flex-direction: column"><div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 6px 20px; padding: 14px 16px; border-top: 1px solid var(--border)"><div style="display: flex; flex-direction: column; gap: 1px; flex: 1 1 190px; max-width: 240px; min-width: 0; padding-top: 7px"><span class="label">Sign login requests</span><span class="mono faint" style="overflow-wrap: anywhere">sign.authnrequest</span></div><div style="display: flex; flex-direction: column; gap: 6px; flex: 3 1 340px; min-width: 0"><label style="display: flex; align-items: center; gap: 10px; min-height: 36px; align-self: flex-start"><input class="switch" type="checkbox" defaultChecked="{{ true }}"><span>On</span></label><div class="help">Sign every request sent to an identity provider. Default: <span class="mono">false</span></div></div><button class="btn btn-quiet btn-icon" type="button" aria-label="Unset sign.authnrequest" style="flex: none; margin-top: 4px"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7"></path></svg></button></div><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding: 12px 16px; border-top: 1px solid var(--border)"><span class="small muted" style="margin-inline-end: 4px">Add</span><button class="opt-add" type="button"><span aria-hidden="true">+</span>certificate</button><button class="opt-add is-hover" type="button"><span aria-hidden="true">+</span>sign.logout</button><button class="opt-add" type="button"><span aria-hidden="true">+</span>redirect.sign</button><button class="opt-add" type="button"><span aria-hidden="true">+</span>new_privatekey</button><button class="opt-add" type="button"><span aria-hidden="true">+</span>signature.algorithm</button></div></div></details><details class="grp card"><summary><span class="h3">Basics</span><span class="small muted">2 of 5 set</span><span class="status s-danger" style="margin-inline-start: auto"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="flex: none"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm-.9 3.5h1.8v5H7.1v-5zm0 6.2h1.8v1.8H7.1v-1.8z"></path></svg>1 error</span></summary><div style="display: flex; flex-direction: column"></div></details></div><p class="xs faint" style="margin: 0; max-width: 72ch">Shows only what is set. A group with nothing set is one line. Unset options are offered by their real name; one click adds and focuses it.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":860,"height":620}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

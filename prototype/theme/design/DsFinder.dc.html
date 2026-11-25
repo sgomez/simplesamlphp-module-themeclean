@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Option finder</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 620px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Option finder</h1><div style="display: flex; flex-direction: column; gap: 24px; min-width: 0"><label style="display: flex; align-items: center; position: relative"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)">Find an option</span><input class="input " type="search" placeholder="Find an option" value="" style="padding-inline-end: 40px"><span class="kbd" aria-hidden="true" style="position: absolute; inset-inline-end: 10px">/</span></label><div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><label style="display: flex; align-items: center; position: relative"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)">Find an option</span><input class="input is-focus" type="search" placeholder="Find an option" value="sign" style="padding-inline-end: 40px"><span class="kbd" aria-hidden="true" style="position: absolute; inset-inline-end: 10px">/</span></label><div class="card" role="listbox" aria-label="Matching options" style="box-shadow: var(--shadow-2); overflow: hidden; border-radius: 8px"><div class="row is-hover" role="option" style="padding: 8px 12px"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0"><span>Sign login requests</span><span class="mono faint">sign.authnrequest</span></div><span class="xs muted">Signing</span><span class="xs" style="flex: 0 0 64px; text-align: end">Go to</span></div><div class="row" role="option" style="padding: 8px 12px"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0"><span>Signature algorithm</span><span class="mono faint">signature.algorithm</span></div><span class="xs muted">Signing</span><span class="xs" style="flex: 0 0 64px; text-align: end">Go to</span></div><div class="row" role="option" style="padding: 8px 12px"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0"><span>Sign logout messages</span><span class="mono faint">sign.logout</span></div><span class="xs muted">Signing</span><span class="xs" style="flex: 0 0 64px; text-align: end; color: var(--accent-text); font-weight: 600">+ Add</span></div><div class="row" role="option" style="padding: 8px 12px"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0"><span>Require signed assertions</span><span class="mono faint">WantAssertionsSigned</span></div><span class="xs muted">Encryption</span><span class="xs" style="flex: 0 0 64px; text-align: end; color: var(--accent-text); font-weight: 600">+ Add</span></div><div class="xs muted" style="display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-top: 1px solid var(--border); background: var(--surface-2)"><span><span class="kbd">↑</span> <span class="kbd">↓</span></span><span><span class="kbd">Enter</span></span><span><span class="kbd">Esc</span></span><span style="margin-inline-start: auto">4 of 64</span></div></div></div><div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><label style="display: flex; align-items: center; position: relative"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)">Find an option</span><input class="input " type="search" placeholder="Find an option" value="zzz" style="padding-inline-end: 40px"><span class="kbd" aria-hidden="true" style="position: absolute; inset-inline-end: 10px">/</span></label><div class="card" style="padding: 12px; box-shadow: var(--shadow-2)"><span class="small muted">No option matches “zzz”</span></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Opens with /. Searches titles and real names, set or not. Without the script the field links to the full option list.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":620}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

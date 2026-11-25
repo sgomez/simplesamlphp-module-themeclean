@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PHP editor</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 860px; min-height: 620px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">PHP editor</h1><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><ul class="card" style="list-style: none; margin: 0; padding: 0; overflow: hidden"><li class="row" style="padding: 8px 16px; gap: 12px; align-items: baseline"><a class="link mono" href="#" style="flex: 0 0 60px">Line 4</a><span class="msg-error"><span style="font-weight: 600">Error</span><span><span class="mono">discoURL</span> Enter the full URL, starting with https://</span></span></li><li class="row" style="padding: 8px 16px; gap: 12px; align-items: baseline"><a class="link mono" href="#" style="flex: 0 0 60px">Line 5</a><span class="msg-warning"><span style="font-weight: 600">Warning</span><span><span class="mono">signature.algorithm</span> Many identity providers reject SHA-1.</span></span></li></ul><div class="card" style="overflow: hidden"><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 6px 8px 6px 16px; border-bottom: 1px solid var(--border)"><span class="small muted" style="flex: 1 1 auto">Literal values only. Comments are not kept.</span><button class="btn btn-quiet btn-sm" type="button" data-copy>Copy</button><button class="btn btn-quiet btn-sm" type="button">Download</button></div><div class="ed"><div class="ed-gutter" aria-hidden="true"><div class="ed-ln"><span></span><span>1</span></div><div class="ed-ln"><span></span><span>2</span></div><div class="ed-ln"><span></span><span>3</span></div><div class="ed-ln err"><span>×</span><span>4</span></div><div class="ed-ln warn"><span>!</span><span>5</span></div><div class="ed-ln"><span></span><span>6</span></div><div class="ed-ln"><span></span><span>7</span></div></div><div class="ed-body"><div class="ed-bg" aria-hidden="true"><div class=""></div><div class=""></div><div class=""></div><div class="err"></div><div class="warn"></div><div class=""></div><div class=""></div></div><textarea class="ed-text" defaultValue="&#x27;default-sp&#x27; =&gt; [&#10;    &#x27;saml:SP&#x27;,&#10;    &#x27;entityID&#x27; =&gt; &#x27;https://login.example.edu/sp&#x27;,&#10;    &#x27;discoURL&#x27; =&gt; &#x27;disco.example.edu/ds&#x27;,&#10;    &#x27;signature.algorithm&#x27; =&gt; &#x27;http://www.w3.org/2000/09/xmldsig#rsa-sha1&#x27;,&#10;    &#x27;privatekey&#x27; =&gt; &#x27;default-sp.pem&#x27;,&#10;]," rows="7" spellcheck="false" wrap="off" aria-label="PHP"></textarea></div></div></div><div class="card" style="overflow: hidden"><div class="row" style="padding: 6px 8px 6px 12px; gap: 8px"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0"><span class="mono">sign.logout</span><span class="xs muted">Sign logout messages · boolean · default <span class="mono">false</span></span></div><button class="btn btn-quiet btn-sm" type="button">Insert</button></div><div class="row" style="padding: 6px 8px 6px 12px; gap: 8px"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0"><span class="mono">privatekey</span><span class="xs muted">Private key</span></div><span class="xs faint" style="padding-inline-end: 8px">Line 6</span></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">A real textarea over a server-rendered gutter and line markers. No syntax colouring. Below, two rows of the option reference.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":860,"height":620}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Callouts and page messages</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 520px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Callouts and page messages</h1><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><div class="callout callout-success"><svg class="ic ic-success" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.2 3.2L13 4.8"></path></svg><div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0"><span style="font-weight: 600">Saved. Not live yet.</span></div><button class="btn btn-secondary btn-sm" type="button">Review 8 changes</button></div><div class="callout callout-info"><svg class="ic ic-info" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm-.9 3h1.8v1.8H7.1V4zm0 3h1.8v5H7.1V7z"></path></svg><div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0"><span style="font-weight: 600">This is an Override</span><span class="small">It replaces the entity with the same ID from the federation feed.</span></div><button class="btn btn-secondary btn-sm" type="button">Compare</button></div><div class="callout callout-warning"><svg class="ic ic-warning" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2 15.2 14H.8L8 1.2zm-.9 4.6v4h1.8v-4H7.1zm0 5.2v1.7h1.8V11H7.1z"></path></svg><div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0"><span style="font-weight: 600">Shadowed on this node</span><span class="small">An external entity with the same ID wins here.</span></div></div><div class="callout callout-error"><svg class="ic ic-error" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm-.9 3.5h1.8v5H7.1v-5zm0 6.2h1.8v1.8H7.1v-1.8z"></path></svg><div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0"><span style="font-weight: 600">Not saved: someone else changed this meanwhile</span><span class="small">Your edits are kept below.</span></div><button class="btn btn-secondary btn-sm" type="button">Show differences</button></div><div class="callout"><svg class="ic " aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm-.9 3h1.8v1.8H7.1V4zm0 3h1.8v5H7.1V7z"></path></svg><span>Neutral, without a title.</span></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Feedback after an action is one of these at the top of the next page.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":520}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

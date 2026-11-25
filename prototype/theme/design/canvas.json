@@ -1,630 +1,383 @@
 {
-  "v": 3,
-  "attachments": {},
-  "boards": {
-    "AddAuthsource.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Add authsource · choose a type",
-      "w": 1440,
-      "x": 6080,
-      "y": 8600
-    },
-    "AddEmpty.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Add · empty paste area",
-      "w": 1440,
-      "x": 1520,
-      "y": 11840
-    },
-    "AddEntity.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Add · paste detected as metadata",
-      "w": 1440,
-      "x": 4560,
-      "y": 0
-    },
-    "AddReview.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "Add · review, nothing to flag",
-      "w": 1440,
-      "x": 6080,
-      "y": 0
-    },
-    "AddSeveral.dc.html": {
-      "expand": "fill",
-      "h": 640,
-      "is_interactive": true,
-      "title": "Add · several entities found",
-      "w": 1440,
-      "x": 6080,
-      "y": 11840
-    },
-    "AddUnreadable.dc.html": {
-      "expand": "fill",
-      "h": 820,
-      "is_interactive": true,
-      "title": "Add · PHP with a value that is not a literal",
-      "w": 1440,
-      "x": 0,
-      "y": 11840
-    },
-    "AddUrl.dc.html": {
-      "expand": "fill",
-      "h": 560,
-      "is_interactive": true,
-      "title": "Add · URL fetch failed",
-      "w": 1440,
-      "x": 3040,
-      "y": 11840
-    },
-    "AddWrongKind.dc.html": {
-      "expand": "fill",
-      "h": 640,
-      "is_interactive": true,
-      "title": "Add · metadata of another kind",
-      "w": 1440,
-      "x": 4560,
-      "y": 11840
-    },
-    "Audit.dc.html": {
-      "expand": "fill",
-      "h": 1200,
-      "is_interactive": true,
-      "title": "History · Audit trail",
-      "w": 1440,
-      "x": 9120,
-      "y": 10080
-    },
-    "Authsources.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Authsource list",
-      "w": 1440,
-      "x": 4560,
-      "y": 8600
-    },
-    "Compare.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Compare an Override with its source",
-      "w": 1440,
-      "x": 4560,
-      "y": 10080
-    },
-    "Configuration.dc.html": {
-      "expand": "fill",
-      "h": 1300,
-      "is_interactive": true,
-      "title": "Core admin · Configuration · sidebar with only core’s items",
-      "w": 1440,
-      "x": 0,
-      "y": 14800
-    },
-    "Consent.dc.html": {
-      "expand": "fill",
-      "h": 760,
-      "is_interactive": true,
-      "title": "Consent",
-      "w": 1280,
-      "x": 3660,
-      "y": 13320
-    },
-    "DesignSystem.dc.html": {
-      "h": 3300,
-      "title": "Design system · tokens and components",
-      "w": 1440,
-      "x": 0,
-      "y": 4640
-    },
-    "Discovery.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "IdP discovery · desktop",
-      "w": 1280,
-      "x": 1830,
-      "y": 13320
-    },
-    "DiscoveryMobile.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "IdP discovery · phone",
-      "w": 390,
-      "x": 3190,
-      "y": 13320
-    },
-    "Error.dc.html": {
-      "expand": "fill",
-      "h": 780,
-      "is_interactive": true,
-      "title": "Error · desktop",
-      "w": 1280,
-      "x": 6380,
-      "y": 13320
-    },
-    "ErrorMobile.dc.html": {
-      "expand": "fill",
-      "h": 844,
-      "is_interactive": true,
-      "title": "Error · phone",
-      "w": 390,
-      "x": 7740,
-      "y": 13320
-    },
-    "External.dc.html": {
-      "expand": "fill",
-      "h": 1280,
-      "is_interactive": true,
-      "title": "External entities · bulk selection",
-      "w": 1440,
-      "x": 0,
-      "y": 10080
-    },
-    "ExternalDetail.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "External entity · detail",
-      "w": 1440,
-      "x": 1520,
-      "y": 10080
-    },
-    "Federation.dc.html": {
-      "expand": "fill",
-      "h": 1100,
-      "is_interactive": true,
-      "title": "Core admin · Federation · full sidebar with two extra modules",
-      "w": 1440,
-      "x": 3040,
-      "y": 14800
-    },
-    "Form.dc.html": {
-      "expand": "fill",
-      "h": 2500,
-      "is_interactive": true,
-      "title": "Form · saml:SP at full size · rejected save",
-      "w": 1440,
-      "x": 3040,
-      "y": 1760
-    },
-    "FormMultiAuth.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Form · multiauth:MultiAuth (2 options) · published",
-      "w": 1440,
-      "x": 0,
-      "y": 1760
-    },
-    "FormPhp.dc.html": {
-      "expand": "fill",
-      "h": 1400,
-      "is_interactive": true,
-      "title": "Form · PHP view · rule errors and a warning",
-      "w": 1440,
-      "x": 4560,
-      "y": 1760
-    },
-    "FormServiceProvider.dc.html": {
-      "expand": "fill",
-      "h": 2000,
-      "is_interactive": true,
-      "title": "Form · typical service provider · unsaved edits",
-      "w": 1440,
-      "x": 1520,
-      "y": 1760
-    },
-    "HistorySnapshots.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "History · Snapshots",
-      "w": 1440,
-      "x": 6080,
-      "y": 10080
-    },
-    "ImportResult.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Import · result",
-      "w": 1440,
-      "x": 3040,
-      "y": 10080
-    },
-    "Login.dc.html": {
-      "expand": "fill",
-      "h": 820,
-      "is_interactive": true,
-      "title": "Login · desktop",
-      "w": 1280,
-      "x": 0,
-      "y": 13320
-    },
-    "LoginMobile.dc.html": {
-      "expand": "fill",
-      "h": 844,
-      "is_interactive": true,
-      "title": "Login · phone · wrong credentials",
-      "w": 390,
-      "x": 1360,
-      "y": 13320
-    },
-    "Logout.dc.html": {
-      "expand": "fill",
-      "h": 700,
-      "is_interactive": true,
-      "title": "Logout · partial",
-      "w": 1280,
-      "x": 5020,
-      "y": 13320
-    },
-    "Main.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Overview · things to do",
-      "w": 1440,
-      "x": 0,
-      "y": 0
-    },
-    "Migration.dc.html": {
-      "expand": "fill",
-      "h": 700,
-      "is_interactive": true,
-      "title": "Database migration notice",
-      "w": 1440,
-      "x": 13680,
-      "y": 10080
-    },
-    "MobileList.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Shell B · narrow · navigation collapsed",
-      "w": 390,
-      "x": 4560,
-      "y": 14800
-    },
-    "MobileNav.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Shell B · narrow · navigation open",
-      "w": 390,
-      "x": 5030,
-      "y": 14800
-    },
-    "Nodes.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Nodes · one behind, problems on this node",
-      "w": 1440,
-      "x": 10640,
-      "y": 10080
-    },
-    "NodesSingle.dc.html": {
-      "expand": "fill",
-      "h": 600,
-      "is_interactive": true,
-      "title": "Nodes · single node",
-      "w": 1440,
-      "x": 12160,
-      "y": 10080
-    },
-    "OverviewClear.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Overview · all clear",
-      "w": 1440,
-      "x": 1520,
-      "y": 8600
-    },
-    "OverviewFirstRun.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Overview · first run",
-      "w": 1440,
-      "x": 0,
-      "y": 8600
-    },
-    "PhpSaved.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "PHP view · saved and normalised · unknown option",
-      "w": 1440,
-      "x": 10640,
-      "y": 11840
-    },
-    "PhpSyntax.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "PHP view · could not read it · Settings blocked",
-      "w": 1440,
-      "x": 9120,
-      "y": 11840
-    },
-    "Publish.dc.html": {
-      "expand": "fill",
-      "h": 1400,
-      "is_interactive": true,
-      "title": "Publish · ready",
-      "w": 1440,
-      "x": 3040,
-      "y": 0
-    },
-    "PublishBlocked.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "Publish · blocked",
-      "w": 1440,
-      "x": 7600,
-      "y": 8600
-    },
-    "PublishDone.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Publish · just published",
-      "w": 1440,
-      "x": 12160,
-      "y": 8600
-    },
-    "PublishEmpty.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Publish · nothing to publish",
-      "w": 1440,
-      "x": 10640,
-      "y": 8600
-    },
-    "PublishMoved.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "Publish · changes moved, shown again",
-      "w": 1440,
-      "x": 9120,
-      "y": 8600
-    },
-    "ReplaceFrom.dc.html": {
-      "expand": "fill",
-      "h": 860,
-      "is_interactive": true,
-      "title": "Replace from… · diff before saving",
-      "w": 1440,
-      "x": 12160,
-      "y": 11840
-    },
-    "ReviewNeeds.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "Add · review with “needs you” items",
-      "w": 1440,
-      "x": 7600,
-      "y": 11840
-    },
-    "Rollback.dc.html": {
-      "expand": "fill",
-      "h": 1000,
-      "is_interactive": true,
-      "title": "Rollback · confirmation",
-      "w": 1440,
-      "x": 7600,
-      "y": 10080
-    },
-    "ServiceProviders.dc.html": {
-      "expand": "fill",
-      "h": 1080,
-      "is_interactive": true,
-      "title": "Entity list · service providers",
-      "w": 1440,
-      "x": 1520,
-      "y": 0
-    },
-    "Sidebar.dc.html": {
-      "h": 900,
-      "title": "Shell B sidebar · mode tweak: console / core / full",
-      "w": 232,
-      "x": 1520,
-      "y": 4640
-    },
-    "SpEmpty.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Entity list · filtered, empty",
-      "w": 1440,
-      "x": 3040,
-      "y": 8600
-    },
-    "TestAuth.dc.html": {
-      "expand": "fill",
-      "h": 900,
-      "is_interactive": true,
-      "title": "Core admin · Test authentication",
-      "w": 1440,
-      "x": 1520,
-      "y": 14800
-    },
-    "LoginMulti.dc.html": {
-      "x": 8210,
-      "y": 13320,
-      "w": 1280,
-      "h": 820,
-      "title": "Login · multiauth · method and form side by side",
-      "expand": "fill",
-      "is_interactive": true
-    },
-    "LoginMultiMobile.dc.html": {
-      "x": 9570,
-      "y": 13320,
-      "w": 390,
-      "h": 900,
-      "title": "Login · multiauth · phone",
-      "expand": "fill",
-      "is_interactive": true
-    }
+ "title": "SimpleSAMLphp Console",
+ "pages": [
+  {
+   "id": "ds",
+   "name": "Design system"
   },
-  "createdOnFiles": {
-    "at": "2026-11-24T12:00:00Z",
-    "v": 1
+  {
+   "id": "theme",
+   "name": "Theme"
+  }
+ ],
+ "boards": {
+  "Consent.dc.html": {
+   "expand": "fill",
+   "h": 760,
+   "is_interactive": true,
+   "title": "Consent",
+   "w": 1280,
+   "x": 0,
+   "y": 2860,
+   "page": "theme"
   },
-  "designSystems": [],
-  "launch": {
-    "view": "canvas"
+  "Discovery.dc.html": {
+   "expand": "fill",
+   "h": 1000,
+   "is_interactive": true,
+   "title": "IdP discovery \u00b7 desktop",
+   "w": 1280,
+   "x": 0,
+   "y": 1380,
+   "page": "theme"
   },
-  "noteOrder": [
-    "t-form",
-    "t-core",
-    "t-ds",
-    "t-rowA",
-    "t-rowB",
-    "t-rowC",
-    "t-rowD",
-    "t-rowE"
-  ],
-  "notes": {
-    "t-core": {
-      "kind": "title1",
-      "maxW": 7520,
-      "text": "Console · core screens",
-      "w": 240,
-      "x": 0,
-      "y": -240
-    },
-    "t-ds": {
-      "kind": "title1",
-      "maxW": 1760,
-      "text": "Design system and shell",
-      "w": 240,
-      "x": 0,
-      "y": 4400
-    },
-    "t-form": {
-      "kind": "title1",
-      "maxW": 6000,
-      "text": "The form · three sizes of object",
-      "w": 240,
-      "x": 0,
-      "y": 1520
-    },
-    "t-rowA": {
-      "kind": "title1",
-      "maxW": 8000,
-      "text": "Console · overview, lists and Publish states",
-      "w": 240,
-      "x": 0,
-      "y": 8360
-    },
-    "t-rowB": {
-      "kind": "title1",
-      "maxW": 8000,
-      "text": "Console · External entities, History, Nodes",
-      "w": 240,
-      "x": 0,
-      "y": 9840
-    },
-    "t-rowC": {
-      "kind": "title1",
-      "maxW": 8000,
-      "text": "Bringing configuration in · PHP states",
-      "w": 240,
-      "x": 0,
-      "y": 11600
-    },
-    "t-rowD": {
-      "kind": "title1",
-      "maxW": 9960,
-      "text": "Theme · end-user pages (Shell A)",
-      "w": 240,
-      "x": 0,
-      "y": 13080
-    },
-    "t-rowE": {
-      "kind": "title1",
-      "maxW": 5420,
-      "text": "Theme · core admin pages · narrow Shell B",
-      "w": 240,
-      "x": 0,
-      "y": 14560
-    }
+  "DiscoveryMobile.dc.html": {
+   "expand": "fill",
+   "h": 1000,
+   "is_interactive": true,
+   "title": "IdP discovery \u00b7 phone",
+   "w": 390,
+   "x": 1360,
+   "y": 1380,
+   "page": "theme"
   },
-  "order": [
-    "Main.dc.html",
-    "ServiceProviders.dc.html",
-    "Publish.dc.html",
-    "FormMultiAuth.dc.html",
-    "FormServiceProvider.dc.html",
-    "Form.dc.html",
-    "AddEntity.dc.html",
-    "AddReview.dc.html",
-    "FormPhp.dc.html",
-    "DesignSystem.dc.html",
-    "Sidebar.dc.html",
-    "OverviewFirstRun.dc.html",
-    "OverviewClear.dc.html",
-    "SpEmpty.dc.html",
-    "Authsources.dc.html",
-    "AddAuthsource.dc.html",
-    "PublishBlocked.dc.html",
-    "PublishMoved.dc.html",
-    "PublishEmpty.dc.html",
-    "PublishDone.dc.html",
-    "External.dc.html",
-    "ExternalDetail.dc.html",
-    "ImportResult.dc.html",
-    "Compare.dc.html",
-    "HistorySnapshots.dc.html",
-    "Rollback.dc.html",
-    "Audit.dc.html",
-    "Nodes.dc.html",
-    "NodesSingle.dc.html",
-    "Migration.dc.html",
-    "AddUnreadable.dc.html",
-    "AddEmpty.dc.html",
-    "AddUrl.dc.html",
-    "AddWrongKind.dc.html",
-    "AddSeveral.dc.html",
-    "ReviewNeeds.dc.html",
-    "PhpSyntax.dc.html",
-    "PhpSaved.dc.html",
-    "ReplaceFrom.dc.html",
-    "Login.dc.html",
-    "LoginMobile.dc.html",
-    "Discovery.dc.html",
-    "DiscoveryMobile.dc.html",
-    "Consent.dc.html",
-    "Logout.dc.html",
-    "Error.dc.html",
-    "ErrorMobile.dc.html",
-    "Configuration.dc.html",
-    "TestAuth.dc.html",
-    "Federation.dc.html",
-    "MobileList.dc.html",
-    "MobileNav.dc.html",
-    "LoginMulti.dc.html",
-    "LoginMultiMobile.dc.html"
-  ],
-  "pages": [],
-  "title": "SimpleSAMLphp Console"
+  "Error.dc.html": {
+   "expand": "fill",
+   "h": 780,
+   "is_interactive": true,
+   "title": "Error \u00b7 desktop",
+   "w": 1280,
+   "x": 0,
+   "y": 4100,
+   "page": "theme"
+  },
+  "ErrorMobile.dc.html": {
+   "expand": "fill",
+   "h": 844,
+   "is_interactive": true,
+   "title": "Error \u00b7 phone",
+   "w": 390,
+   "x": 1360,
+   "y": 4100,
+   "page": "theme"
+  },
+  "Login.dc.html": {
+   "expand": "fill",
+   "h": 820,
+   "is_interactive": true,
+   "title": "Login \u00b7 desktop",
+   "w": 1280,
+   "x": 0,
+   "y": 0,
+   "page": "theme"
+  },
+  "LoginMobile.dc.html": {
+   "expand": "fill",
+   "h": 844,
+   "is_interactive": true,
+   "title": "Login \u00b7 phone \u00b7 wrong credentials",
+   "w": 390,
+   "x": 1360,
+   "y": 0,
+   "page": "theme"
+  },
+  "LoginMulti.dc.html": {
+   "expand": "fill",
+   "h": 820,
+   "is_interactive": true,
+   "title": "Login \u00b7 multiauth \u00b7 method and form side by side",
+   "w": 1280,
+   "x": 1830,
+   "y": 0,
+   "page": "theme"
+  },
+  "LoginMultiMobile.dc.html": {
+   "expand": "fill",
+   "h": 900,
+   "is_interactive": true,
+   "title": "Login \u00b7 multiauth \u00b7 phone",
+   "w": 390,
+   "x": 3190,
+   "y": 0,
+   "page": "theme"
+  },
+  "Logout.dc.html": {
+   "expand": "fill",
+   "h": 700,
+   "is_interactive": true,
+   "title": "Logout \u00b7 partial",
+   "w": 1280,
+   "x": 1360,
+   "y": 2860,
+   "page": "theme"
+  },
+  "MobileList.dc.html": {
+   "expand": "fill",
+   "h": 900,
+   "is_interactive": true,
+   "title": "Shell B \u00b7 narrow \u00b7 navigation collapsed",
+   "w": 390,
+   "x": 0,
+   "y": 6060,
+   "page": "ds"
+  },
+  "MobileNav.dc.html": {
+   "expand": "fill",
+   "h": 900,
+   "is_interactive": true,
+   "title": "Shell B \u00b7 narrow \u00b7 navigation open",
+   "w": 390,
+   "x": 470,
+   "y": 6060,
+   "page": "ds"
+  },
+  "Sidebar.dc.html": {
+   "h": 900,
+   "title": "Shell B sidebar \u00b7 mode: console / core / full",
+   "w": 232,
+   "x": 5220,
+   "y": 4580,
+   "page": "ds"
+  },
+  "DsColour.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 960,
+   "h": 460,
+   "title": "Colour",
+   "page": "ds"
+  },
+  "DsType.dc.html": {
+   "x": 1040,
+   "y": 0,
+   "w": 720,
+   "h": 420,
+   "title": "Type",
+   "page": "ds"
+  },
+  "DsSpace.dc.html": {
+   "x": 1840,
+   "y": 0,
+   "w": 720,
+   "h": 420,
+   "title": "Space, shape, elevation, focus",
+   "page": "ds"
+  },
+  "DsButtons.dc.html": {
+   "x": 0,
+   "y": 940,
+   "w": 720,
+   "h": 520,
+   "title": "Buttons",
+   "page": "ds"
+  },
+  "DsTextInputs.dc.html": {
+   "x": 800,
+   "y": 940,
+   "w": 720,
+   "h": 760,
+   "title": "Text inputs",
+   "page": "ds"
+  },
+  "DsChoices.dc.html": {
+   "x": 1600,
+   "y": 940,
+   "w": 720,
+   "h": 420,
+   "title": "Switch, checkbox, radio",
+   "page": "ds"
+  },
+  "DsSecret.dc.html": {
+   "x": 2400,
+   "y": 940,
+   "w": 720,
+   "h": 460,
+   "title": "Secret and copy fields",
+   "page": "ds"
+  },
+  "DsKeyCert.dc.html": {
+   "x": 3200,
+   "y": 940,
+   "w": 720,
+   "h": 720,
+   "title": "Key reference and certificate",
+   "page": "ds"
+  },
+  "DsListEditor.dc.html": {
+   "x": 4000,
+   "y": 940,
+   "w": 720,
+   "h": 800,
+   "title": "List editor and language map",
+   "page": "ds"
+  },
+  "DsStatus.dc.html": {
+   "x": 0,
+   "y": 2220,
+   "w": 720,
+   "h": 520,
+   "title": "Status and chips",
+   "page": "ds"
+  },
+  "DsCallout.dc.html": {
+   "x": 800,
+   "y": 2220,
+   "w": 720,
+   "h": 520,
+   "title": "Callouts and page messages",
+   "page": "ds"
+  },
+  "DsModal.dc.html": {
+   "x": 1600,
+   "y": 2220,
+   "w": 720,
+   "h": 640,
+   "title": "Confirmation dialog",
+   "page": "ds"
+  },
+  "DsEmpty.dc.html": {
+   "x": 2400,
+   "y": 2220,
+   "w": 720,
+   "h": 760,
+   "title": "Empty and loading states",
+   "page": "ds"
+  },
+  "DsRow.dc.html": {
+   "x": 0,
+   "y": 3460,
+   "w": 960,
+   "h": 640,
+   "title": "Object list row",
+   "page": "ds"
+  },
+  "DsTable.dc.html": {
+   "x": 1040,
+   "y": 3460,
+   "w": 720,
+   "h": 320,
+   "title": "Report table",
+   "page": "ds"
+  },
+  "DsDiff.dc.html": {
+   "x": 1840,
+   "y": 3460,
+   "w": 720,
+   "h": 420,
+   "title": "Diff",
+   "page": "ds"
+  },
+  "DsCode.dc.html": {
+   "x": 2640,
+   "y": 3460,
+   "w": 720,
+   "h": 400,
+   "title": "Code block",
+   "page": "ds"
+  },
+  "DsEntityId.dc.html": {
+   "x": 3440,
+   "y": 3460,
+   "w": 720,
+   "h": 360,
+   "title": "Entity ID",
+   "page": "ds"
+  },
+  "DsNav.dc.html": {
+   "x": 4240,
+   "y": 3460,
+   "w": 720,
+   "h": 560,
+   "title": "Tabs, breadcrumbs, pagination, menu",
+   "page": "ds"
+  },
+  "DsOption.dc.html": {
+   "x": 0,
+   "y": 4580,
+   "w": 860,
+   "h": 1000,
+   "title": "Option row",
+   "page": "ds"
+  },
+  "DsGroup.dc.html": {
+   "x": 940,
+   "y": 4580,
+   "w": 860,
+   "h": 620,
+   "title": "Option group",
+   "page": "ds"
+  },
+  "DsFinder.dc.html": {
+   "x": 1880,
+   "y": 4580,
+   "w": 720,
+   "h": 620,
+   "title": "Option finder",
+   "page": "ds"
+  },
+  "DsEditor.dc.html": {
+   "x": 2680,
+   "y": 4580,
+   "w": 860,
+   "h": 620,
+   "title": "PHP editor",
+   "page": "ds"
+  },
+  "DsSaveBar.dc.html": {
+   "x": 3620,
+   "y": 4580,
+   "w": 720,
+   "h": 460,
+   "title": "Save bar",
+   "page": "ds"
+  },
+  "DsTopBar.dc.html": {
+   "x": 4420,
+   "y": 4580,
+   "w": 720,
+   "h": 500,
+   "title": "Top bar",
+   "page": "ds"
+  }
+ },
+ "order": [
+  "Sidebar.dc.html",
+  "Login.dc.html",
+  "LoginMobile.dc.html",
+  "Discovery.dc.html",
+  "DiscoveryMobile.dc.html",
+  "Consent.dc.html",
+  "Logout.dc.html",
+  "Error.dc.html",
+  "ErrorMobile.dc.html",
+  "MobileList.dc.html",
+  "MobileNav.dc.html",
+  "LoginMulti.dc.html",
+  "LoginMultiMobile.dc.html",
+  "DsColour.dc.html",
+  "DsType.dc.html",
+  "DsSpace.dc.html",
+  "DsButtons.dc.html",
+  "DsTextInputs.dc.html",
+  "DsChoices.dc.html",
+  "DsSecret.dc.html",
+  "DsKeyCert.dc.html",
+  "DsListEditor.dc.html",
+  "DsStatus.dc.html",
+  "DsCallout.dc.html",
+  "DsModal.dc.html",
+  "DsEmpty.dc.html",
+  "DsRow.dc.html",
+  "DsTable.dc.html",
+  "DsDiff.dc.html",
+  "DsCode.dc.html",
+  "DsEntityId.dc.html",
+  "DsNav.dc.html",
+  "DsOption.dc.html",
+  "DsGroup.dc.html",
+  "DsFinder.dc.html",
+  "DsEditor.dc.html",
+  "DsSaveBar.dc.html",
+  "DsTopBar.dc.html"
+ ]
 }

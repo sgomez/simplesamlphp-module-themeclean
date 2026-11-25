@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Status and chips</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 520px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Status and chips</h1><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Unsaved</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-unsaved"><span class="dot" aria-hidden="true"></span>Unsaved edits</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Saved, not live</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-pending"><span class="dot dot-half" aria-hidden="true"></span>Modified, not live</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">New</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-pending"><span class="dot" aria-hidden="true"></span>New, not published</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Withdrawn</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-pending"><span class="dot dot-minus" aria-hidden="true"></span>Disabled, not published</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Deleted</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-pending"><span class="dot dot-minus" aria-hidden="true"></span>Deleted, not published</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Live</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-live"><span class="dot dot-full" aria-hidden="true"></span>Published</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Warning</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-warn"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" style="flex: none"><path d="M8 1.2 15.2 14H.8L8 1.2zm-.9 4.6v4h1.8v-4H7.1zm0 5.2v1.7h1.8V11H7.1z"></path></svg><span>Certificate expires in 12 days</span></span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Node behind</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="status s-danger"><span class="dot dot-minus" aria-hidden="true"></span>Serves #39 · 2 behind</span></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 120px">Chips</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="chip">Override</span><span class="chip">Read-only</span><span class="chip">Managed</span><span class="chip">Secret reference</span><span class="chip">This node</span></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Status is a dot and words: where the object stands in the publish cycle. A chip is a boxed, neutral fact. Lists show one line at most, and nothing for a healthy published object.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":520}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

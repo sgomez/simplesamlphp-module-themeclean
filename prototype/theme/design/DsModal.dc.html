@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Confirmation dialog</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 640px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Confirmation dialog</h1><div style="display: flex; flex-direction: column; gap: 20px; min-width: 0"><div role="dialog" aria-label="Delete Moodle?" class="card" style="display: flex; flex-direction: column; gap: 12px; padding: 20px; box-shadow: var(--shadow-2); max-width: 460px"><h2 class="h2">Delete Moodle?</h2><p class="small muted" style="margin: 0">Nodes keep serving it until you publish. Until then you can discard the deletion.</p><div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px"><button class="btn btn-secondary" type="button">Cancel</button><button class="btn btn-danger-solid" type="button">Delete</button></div></div><div role="dialog" aria-label="Discard all 7 changes?" class="card" style="display: flex; flex-direction: column; gap: 12px; padding: 20px; box-shadow: var(--shadow-2); max-width: 460px"><h2 class="h2">Discard all 7 changes?</h2><p class="small muted" style="margin: 0">3 modified, 2 new, 1 withdrawn and 1 deleted object go back to what is live. This cannot be undone.</p><div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px"><button class="btn btn-secondary" type="button">Keep changes</button><button class="btn btn-danger-solid" type="button">Discard 7 changes</button></div></div><div role="dialog" aria-label="Leave without saving?" class="card" style="display: flex; flex-direction: column; gap: 12px; padding: 20px; box-shadow: var(--shadow-2); max-width: 460px"><h2 class="h2">Leave without saving?</h2><p class="small muted" style="margin: 0">Your edits to 1 option will be lost.</p><div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px"><button class="btn btn-secondary" type="button">Stay</button><button class="btn btn-primary" type="button">Leave</button></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Only for delete, discard, rollback and leaving unsaved edits. The button repeats the verb. Without the script it is a page of its own.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":640}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

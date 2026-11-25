@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Space, shape, elevation, focus</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 420px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Space, shape, elevation, focus</h1><div style="display: flex; flex-direction: column; gap: 24px; min-width: 0"><div style="display: flex; align-items: flex-end; gap: 12px"><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 4px; height: 4px; background: var(--accent-solid)"></span><span class="mono xs">4</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 8px; height: 8px; background: var(--accent-solid)"></span><span class="mono xs">8</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 12px; height: 12px; background: var(--accent-solid)"></span><span class="mono xs">12</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 16px; height: 16px; background: var(--accent-solid)"></span><span class="mono xs">16</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 24px; height: 24px; background: var(--accent-solid)"></span><span class="mono xs">24</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 32px; height: 32px; background: var(--accent-solid)"></span><span class="mono xs">32</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="width: 48px; height: 48px; background: var(--accent-solid)"></span><span class="mono xs">48</span></div></div><div style="display: flex; flex-wrap: wrap; gap: 16px"><span class="mono xs" style="width: 96px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 4px">4 chip</span><span class="mono xs" style="width: 96px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 6px">6 control</span><span class="mono xs" style="width: 96px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 10px">10 card</span><span class="mono xs" style="width: 96px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-1)">shadow-1</span><span class="mono xs" style="width: 96px; height: 48px; display: inline-flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-2)">shadow-2</span></div><div><button class="btn btn-secondary is-focus" type="button">Focus ring</button></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Shadows only for what floats: menus, the save bar, dialogs.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colour</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 960px; min-height: 460px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Colour</h1><div style="display: flex; flex-wrap: wrap; gap: 12px"><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg)"></span><span class="mono xs">--bg</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--side)"></span><span class="mono xs">--side</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface)"></span><span class="mono xs">--surface</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface-2)"></span><span class="mono xs">--surface-2</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--hover)"></span><span class="mono xs">--hover</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--border)"></span><span class="mono xs">--border</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--border-strong)"></span><span class="mono xs">--border-strong</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--text-3)"></span><span class="mono xs">--text-3</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--text-2)"></span><span class="mono xs">--text-2</span></div><div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 80px; min-width: 0"><span style="height: 44px; border-radius: 6px; border: 1px solid var(--border); background: var(--text)"></span><span class="mono xs">--text</span></div></div><div style="display: flex; flex-wrap: wrap; gap: 12px"><div style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 8px; background: var(--accent-bg); border: 1px solid var(--accent-border); flex: 1 1 150px"><span style="color: var(--accent-text); font-weight: 600">Accent</span><span class="xs" style="color: var(--accent-text)">Actions, focus, “saved, not live”</span><span style="height: 24px; border-radius: 6px; background: var(--accent-solid)"></span></div><div style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 8px; background: var(--success-bg); border: 1px solid var(--success-border); flex: 1 1 150px"><span style="color: var(--success-text); font-weight: 600">Success</span><span class="xs" style="color: var(--success-text)">Live, found, passed</span></div><div style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 8px; background: var(--warning-bg); border: 1px solid var(--warning-border); flex: 1 1 150px"><span style="color: var(--warning-text); font-weight: 600">Warning</span><span class="xs" style="color: var(--warning-text)">Never blocks</span></div><div style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 8px; background: var(--danger-bg); border: 1px solid var(--danger-border); flex: 1 1 150px"><span style="color: var(--danger-text); font-weight: 600">Danger</span><span class="xs" style="color: var(--danger-text)">Errors, destructive</span><span style="height: 24px; border-radius: 6px; background: var(--danger-solid)"></span></div><div style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 8px; background: var(--info-bg); border: 1px solid var(--info-border); flex: 1 1 150px"><span style="color: var(--info-text); font-weight: 600">Info</span><span class="xs" style="color: var(--info-text)">Facts</span></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Each semantic colour has -text, -bg and -border. A deployer re-skins Shell A by changing the four accent tokens.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":960,"height":460}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Save bar</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 460px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Save bar</h1><div style="display: flex; flex-direction: column; gap: 14px; min-width: 0"><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; padding: 12px 20px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-2)"><div style="flex: 1 1 200px"><span class="status s-live"><span class="dot dot-full" aria-hidden="true"></span>Published</span></div><button class="btn btn-primary" type="button" disabled>Save</button></div><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; padding: 12px 20px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-2)"><div style="flex: 1 1 200px"><span class="status s-unsaved"><span class="dot" aria-hidden="true"></span>Unsaved edits to 1 option</span></div><button class="btn btn-quiet" type="button">Discard edits</button><button class="btn btn-primary" type="button">Save</button></div><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; padding: 12px 20px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-2)"><div style="flex: 1 1 200px"><span class="status s-pending"><span class="dot dot-half" aria-hidden="true"></span>Saved, not live</span></div><button class="btn btn-primary" type="button" disabled>Save</button></div><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; padding: 12px 20px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-2)"><div style="flex: 1 1 200px"><span class="status s-pending"><span class="dot" aria-hidden="true"></span>New, not saved yet</span></div><button class="btn btn-quiet" type="button">Cancel</button><button class="btn btn-primary" type="button">Save</button></div><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; padding: 12px 20px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 8px; box-shadow: var(--shadow-2)"><div style="flex: 1 1 200px"></div><button class="btn btn-quiet" type="button">Back</button><button class="btn btn-secondary" type="button">Edit first</button><button class="btn btn-primary" type="button">Save</button></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">Sticks to the bottom of the page and always states where the object stands. Same bar in Settings and PHP. The last one is the review step.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":460}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

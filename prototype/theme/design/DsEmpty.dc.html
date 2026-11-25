@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Empty and loading states</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 760px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Empty and loading states</h1><div style="display: flex; flex-direction: column; gap: 20px; min-width: 0"><div class="card empty"><h2 class="h2">Nothing is managed yet</h2><p class="muted" style="margin: 0; max-width: 48ch">Entities and authsources you add here are checked, versioned and published to every node.</p><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px"><button class="btn btn-primary" type="button">Add a service provider</button><button class="btn btn-secondary" type="button">Import existing entities</button></div></div><div class="card empty"><h2 class="h2">No service provider matches “zoom”</h2><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px"><button class="btn btn-secondary" type="button">Clear search</button></div></div><div class="card" aria-busy="true" aria-label="Loading" style="overflow: hidden"><div class="row"><div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 auto"><span class="skel" style="width: 34%"></span><span class="skel" style="width: 62%"></span></div></div><div class="row"><div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 auto"><span class="skel" style="width: 26%"></span><span class="skel" style="width: 54%"></span></div></div><div class="row"><div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 auto"><span class="skel" style="width: 30%"></span><span class="skel" style="width: 48%"></span></div></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">The skeleton appears only while a URL fetch or a Publication runs, and does not animate.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":760}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

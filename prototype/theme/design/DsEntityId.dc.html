@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Entity ID</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 360px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Entity ID</h1><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">Fits</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><div style="width: 100%"><span class="eid"><span class="eid-a">https://intranet-old.example.edu/simplesaml/module.php/saml/sp/metadat</span><span class="eid-b">a.php/default-sp</span></span></div></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">420 px</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><div style="width: 420px"><span class="eid"><span class="eid-a">https://intranet-old.example.edu/simplesaml/module.php/saml/sp/metadat</span><span class="eid-b">a.php/default-sp</span></span></div></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">260 px</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><div style="width: 260px"><span class="eid"><span class="eid-a">https://intranet-old.example.edu/simplesaml/module.php/saml/sp/metadat</span><span class="eid-b">a.php/default-sp</span></span></div></div></div><div style="display: flex; align-items: center; gap: 16px"><span class="xs muted" style="flex: 0 0 96px">On its own page</span><div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; flex: 1 1 auto; min-width: 0"><span class="mono muted" style="overflow-wrap: anywhere; max-width: 380px">https://intranet-old.example.edu/simplesaml/module.php/saml/sp/metadata.php/default-sp</span><button class="btn btn-quiet btn-sm" type="button">Copy</button></div></div></div><p class="xs faint" style="margin: 0; max-width: 72ch">In lists it stays on one line and loses its middle. Hover and copy give the full value. On the object’s page it wraps and is never cut.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":360}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>

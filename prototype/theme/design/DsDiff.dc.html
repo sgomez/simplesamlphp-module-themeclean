@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diff</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./console.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="ui {{theme}}" style="width: 720px; min-height: 420px; box-sizing: border-box; padding: 32px; display: flex; flex-direction: column; gap: 20px; background: var(--bg)"><h1 class="h2">Diff</h1><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><div class="diff"><div class="dl"><span class="ds"></span><span>  &#x27;NameIDFormat&#x27; =&gt; &#x27;urn:oasis:names:tc:SAML:2.0:nameid-format:persistent&#x27;,</span></div><div class="dl dl-del"><span class="ds">-</span><span>  &#x27;validate.authnrequest&#x27; =&gt; false,</span></div><div class="dl dl-add"><span class="ds">+</span><span>  &#x27;validate.authnrequest&#x27; =&gt; true,</span></div><div class="dl dl-sec"><span class="ds">~</span><span>  &#x27;privatekey_pass&#x27;  secret changed, value not shown</span></div></div><details class="grp card" open="{{ true }}"><summary style="flex-wrap: wrap; gap: 4px 10px"><span class="mono" aria-hidden="true" style="width: 20px; height: 20px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; background: var(--surface-2); border: 1px solid var(--border)">~</span><span class="muted small">Modified</span><span style="font-weight: 600">Moodle</span><span class="small faint">Service provider</span><span class="small muted" style="margin-inline-start: auto">1 option</span></summary><div style="padding: 0 16px 16px 46px"><div class="diff"><div class="dl"><span class="ds"></span><span>  &#x27;attributes&#x27; =&gt; [&#x27;uid&#x27;, &#x27;mail&#x27;, &#x27;displayName&#x27;,</span></div><div class="dl dl-add"><span class="ds">+</span><span>      &#x27;eduPersonAffiliation&#x27;,</span></div><div class="dl"><span class="ds"></span><span>  ],</span></div></div></div></details></div><p class="xs faint" style="margin: 0; max-width: 72ch">One unified PHP diff for Publish, History, Rollback and Replace. The signs are not selectable. Below, the change row that wraps it.</p></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["light","dark"],"default":"light"},"$preview":{"width":720,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { theme: this.props.theme ?? 'light' };
+}
+}
+</script>
+</body>
+</html>
